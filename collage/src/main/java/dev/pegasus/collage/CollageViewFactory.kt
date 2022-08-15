@@ -5,14 +5,7 @@ import android.net.Uri
 import android.util.AttributeSet
 import dev.pegasus.collage.views.*
 
-class CollageViewFactory(
-    var context: Context,
-    var attrs: AttributeSet?,
-    var layoutWidth: Int,
-    var layoutHeight: Int,
-    var isBorderEnabled: Boolean,
-    var imageUris: Array<Uri?>?
-) {
+class CollageViewFactory(var context: Context, var attrs: AttributeSet?, var layoutWidth: Int, var layoutHeight: Int, var isBorderEnabled: Boolean, var imageUris: Array<Uri?>?) {
 
     fun getView(layoutType: CollageLayoutType): AbstractCollageView {
         return when (layoutType) {
